@@ -760,6 +760,23 @@
 	</extension>
 </addon>
 
+<addon id="plugin.video.f4mTester" version="2.7.1" name="f4mTester" provider-name="Shani">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.video.F4mProxy" version="2.7.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+
+
+    <extension point="xbmc.addon.metadata">
+        <summary>f4mTester</summary>
+        <description></description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="plugin.video.metalliq" name="MetalliQ" version="2.0.13krypton" provider-name="OpenELEQ, Midraal">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0"/>
@@ -893,6 +910,23 @@
 	</extension>
 </addon>
 
+    <addon id="repository.axgomez" name="My Kodi Addons" version="0.1.0" provider-name="Javi Gomez">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="My Kodi Addons">
+            <info compressed="false">https://raw.githubusercontent.com/axgomez/kodi/master/_repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/axgomez/kodi/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/axgomez/kodi/master/_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>My Favourite Kodi Addons</summary>
+            <description>A Collection of some of my favourite video add ons for Kodi</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+
 <addon id="repository.colossus" name="[COLOR gold]Colossus Repository[/COLOR]" version="999.999.6" provider-name="Colossal">
     <extension point="xbmc.addon.repository" name="[COLOR gold]Colossus Repository[/COLOR]">
     <dir>
@@ -908,23 +942,6 @@
         <summary>Home Of 3rd Party Addons</summary>
         <description></description>
         <platform>all</platform>
-    </extension>
-</addon>
-
-    <addon id="repository.name" name="Your Addons Name" version="0.1.0" provider-name="Your Name">
-        <requires>
-            <import addon="xbmc.addon" version="12.0.0"/>
-        </requires>
-        <extension point="xbmc.addon.repository" name="Your Addons Name">
-            <info compressed="false">https://raw.githubusercontent.com/axgomez/kodi/_repo/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/axgomez/kodi/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/axgomez/kodi/_repo/</datadir>
-            <hashes>false</hashes>
-        </extension>
-        <extension point="xbmc.addon.metadata">
-            <summary>A short summary of this addon</summary>
-            <description>The description can be longer. Using [CR] you can create a newline. The use of other markup is not advised.</description>
-            <platform>all</platform>
     </extension>
 </addon>
 
@@ -1491,6 +1508,22 @@
         <screenshot>resources/image-02.png</screenshot>
         <screenshot>resources/image-03.png</screenshot>
     </assets>
+	</extension>
+</addon>
+
+<addon id="script.video.F4mProxy" name="F4mProxy" version="2.8.7" provider-name="Shani">
+	<requires>
+		<import addon="xbmc.python" version="2.1.0"/>
+		<import addon="script.module.requests"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib"/>
+		<extension point="xbmc.python.pluginsource" library="addon.py">
+		<provides>executable</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Proxy for f4m</summary>
+		<description lang="en">Use this addon to play F4m v1 and v2 streams</description>
 	</extension>
 </addon>
 
